@@ -1,0 +1,292 @@
+
+//@import '../libs/fontawesome/fontawesome.scss';
+//@import "../libs/fontawesome/regular.scss";
+
+@import "../scss/fb.scss";
+
+.dev-studio {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  background-color: #eee;
+  z-index: 10000;
+  /*border: 2px red solid;*/
+
+  // Header
+  .header {
+    padding:10px 10px 10px 5px;
+    display: flex;
+
+    // Logo
+    .logo {
+      width: 110px;
+      max-width:110px;
+      height: 30px;
+      vertical-align: top;
+      position:relative;
+
+      img {
+        margin-left:3px;
+
+      }
+    }
+
+    // Modules
+    .modules {
+      /*border: 1px red solid;*/
+      vertical-align: top;
+      margin-left: 10px;
+      display: flex;
+      transition: 1s;
+
+      .tab-module {
+        padding: 6px 12px 0 12px;
+        margin-right: 5px;
+        height: 30px;
+        background-color: #ddd;
+        border-radius: 2px;
+        cursor: pointer;
+        &:not(.active):hover {
+          background-color: #74b4df;
+          color: #fff;
+        }
+        &.active {
+          background-color: #1286c9;
+          color: #fff;
+        }
+
+      }
+    }
+
+    // Buttons
+    .buttons {
+      /*border: 1px red solid;*/
+      float: right;
+      vertical-align: top;
+      margin-right: 10px;
+      transition: 1s;
+    }
+  }
+
+  // Workspace
+  .workspace {
+    /*border: 1px red solid;*/
+    display: flex;
+    padding:5px;
+    width:100%;
+    min-height:500px;
+    transition: 1s;
+
+    .tabs-components {
+      /*border: 1px red solid;*/
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width:130px;
+      padding-top:37px;
+
+      .component {
+        /*border: 1px red solid;*/
+        border-top-left-radius:2px;
+        border-bottom-left-radius:2px;
+        background-color: #ddd;
+        margin-bottom:4px;
+        padding:7px 10px;
+        &.active {
+          background-color: #1286c9;
+          color: #fff;
+        }
+        &:not(.active):hover {
+          background-color: #74b4df;
+          color: #fff;
+          cursor:pointer;
+        }
+      }
+    }
+    .tabs-data {
+      display: flex;
+      flex-direction: column;
+
+      width:100%;
+
+      .tabs {
+        display: flex;
+        .title {
+          display: flex;
+          font-size:12px;
+          margin-right:3px;
+        }
+
+        .checkpoints {
+          display: flex;
+          align-items: center;
+          background-color:#fff7da;
+          padding:2px 5px;
+          height:30px;
+          margin-left:5px;
+          .select {
+            display: flex;
+
+          }
+          .icons {
+            display: flex;
+            margin-left:5px;
+
+
+          }
+
+        }
+
+        .tabs-units {
+          display: flex;
+          margin-left:10px;
+
+          .unit {
+            display: flex;
+            border-top-left-radius:2px;
+            border-top-right-radius:2px;
+            background-color: #ddd;
+            margin-right:3px;
+            padding:5px 7px;
+            &.active {
+              background-color: #1286c9;
+              color: #fff;
+            }
+            .fb {
+              opacity:1;
+            }
+            &:not(.active):hover {
+              background-color: #74b4df;
+              color: #fff;
+              cursor:pointer;
+            }
+          }
+        }
+      }
+      .data {
+        display: flex;
+        border-radius: 1px;
+        border: 1px #ddd solid;
+        background-color: #fafafa;
+        max-height: 800px;
+        height: 800px;
+
+        #dev-studio-data {
+          display: flex;
+          flex-basis: 50%;
+          overflow: scroll;
+          padding: 5px;
+        }
+        #dev-studio-data-detail {
+          display: flex;
+          flex-basis: 50%;
+          overflow: scroll;
+          border-left:1px #ddd solid;
+          padding: 5px;
+        }
+      }
+    }
+
+  }
+
+  // Data - Table
+  .data-table {
+    width:100%;
+    tr {
+      border-radius:4px;
+      &.subheader {
+        background-color:#74b4df !important;
+        color:#fff;
+      }
+    }
+    tr:nth-child(even) {
+      background-color:#f2f2f2;
+    }
+    td, th {
+      font-size:12px;
+      padding:4px 8px;
+    }
+    td {
+
+    }
+    th {
+      background-color:#eee;
+    }
+  }
+
+
+  button {
+    height: 30px;
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    cursor: pointer;
+    background-color: #1286c9;
+    color: #fff;
+    &:hover {
+      background-color: #2490ce;
+    }
+  }
+  select {
+    font-size:12px;
+    border-radius:1px;
+    height:25px;
+
+  }
+
+  // On - Off
+  .on-off {
+    position:absolute;
+    top:40px;
+    left:30px;
+    border-radius:2px;
+    width:54px;
+    height:25px;
+    cursor:pointer;
+    background-color:#29d73e;
+    z-index:1000;
+
+    .items {
+      position:absolute;
+      color:#fff;
+      top:3px;
+      left:6px;
+      font-size:12px;
+    }
+    .slider {
+      border-radius:2px;
+      position:absolute;
+      top:2px;
+      left:2px;
+      width:24px;
+      height:21px;
+      background-color:#1ec331;
+
+      transition: 1s;
+    }
+    &.off {
+      background-color:#bbb;
+      .slider {
+        background-color:#999;
+
+        left:28px;
+        width:24px;
+      }
+    }
+  }
+
+  // DevStudio .off
+  &.off {
+    .modules, .workspace, .buttons {
+      opacity: 0.1;
+    }
+  }
+}
+
+
+.ds-text-right {
+  text-align:right;
+}
+

@@ -1,0 +1,88 @@
+[13-Oct-2016 19:08:57 UTC] PHP Notice:  Undefined index: table in D:\Sites\wordpress-4.6.1\www\helper\ajax\table.ajax.php on line 5
+[13-Oct-2016 19:21:47 UTC] PHP Notice:  Undefined offset: 0 in D:\Sites\wordpress-4.6.1\www\helper\ajax\table.ajax.php on line 18
+[13-Oct-2016 19:23:03 UTC] PHP Notice:  Undefined offset: 0 in D:\Sites\wordpress-4.6.1\www\helper\ajax\table.ajax.php on line 19
+[13-Oct-2016 19:23:13 UTC] PHP Notice:  Undefined offset: 0 in D:\Sites\wordpress-4.6.1\www\helper\ajax\table.ajax.php on line 19
+[15-Oct-2016 18:32:57 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:34:00 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:34:03 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:34:32 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:39:30 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:39:55 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:40:26 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:40:31 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:40:32 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:40:39 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:44:17 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:54 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:54 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:54 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:55:56 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:02 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:02 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:02 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:29 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:45 UTC] PHP Notice:  Undefined index: ID in D:\Sites\wordpress-4.6.1\www\helper\ajax\post-info.ajax.php on line 27
+[15-Oct-2016 18:56:45 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:56:45 UTC] PHP Notice:  Undefined index: ID in D:\Sites\wordpress-4.6.1\www\helper\ajax\post-info.ajax.php on line 37
+[15-Oct-2016 18:56:45 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:58:49 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:58:49 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:59:32 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 18:59:32 UTC] PHP Notice:  Undefined variable: return in D:\Sites\wordpress-4.6.1\www\helper\mysql.class.php on line 44
+[15-Oct-2016 19:02:30 UTC] PHP Notice:  Undefined index: style in D:\Sites\wordpress-4.6.1\www\helper\functions.php on line 6
+[17-Oct-2016 14:25:17 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 5
+[17-Oct-2016 14:34:41 UTC] PHP Notice:  Undefined index: slug in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 21
+[17-Oct-2016 14:34:41 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 28
+[17-Oct-2016 14:35:33 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 28
+[17-Oct-2016 14:36:57 UTC] PHP Fatal error:  Cannot redeclare show_table() (previously declared in D:\Sites\wordpress-4.6.1\www\my-functions.php:9) in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\core\functions.php on line 17
+[17-Oct-2016 14:40:03 UTC] PHP Fatal error:  Call to undefined method wpdb::row() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 25
+[17-Oct-2016 14:40:36 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 29
+[17-Oct-2016 14:40:58 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\post-info.ajax.php on line 39
+[17-Oct-2016 14:52:59 UTC] PHP Notice:  Undefined variable: data in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\helper\ajax\table.ajax.php on line 12
+[17-Oct-2016 14:58:50 UTC] WordPress database error Table 'wordpress_4_6_1.wp1_posts' doesn't exist for query SELECT * FROM wp1_posts
+[17-Oct-2016 14:59:06 UTC] WordPress database error Table 'wordpress_4_6_1.wp1' doesn't exist for query SELECT * FROM wp1 _posts
+[17-Oct-2016 14:59:25 UTC] WordPress database error Table 'wordpress_4_6_1.wp1_posts' doesn't exist for query SELECT * FROM wp1_posts
+[18-Oct-2016 08:10:19 UTC] PHP Notice:  Undefined index: type in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\developer-helper\ajax\block.ajax.php on line 5
+[18-Oct-2016 08:10:19 UTC] PHP Notice:  Undefined index: id in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\developer-helper\ajax\block.ajax.php on line 5
+[18-Oct-2016 08:40:58 UTC] PHP Fatal error:  Class 'wpvDB' not found in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\developer-helper\ajax\post-info.ajax.php on line 8
+[18-Oct-2016 11:58:13 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 575
+[18-Oct-2016 11:58:13 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 562
+[18-Oct-2016 11:58:13 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in D:\Sites\wordpress-4.6.1\www\wp-includes\widgets.php on line 541
+[18-Oct-2016 12:00:19 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 575
+[18-Oct-2016 12:00:19 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 562
+[18-Oct-2016 12:00:19 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in D:\Sites\wordpress-4.6.1\www\wp-includes\widgets.php on line 541
+[18-Oct-2016 12:00:55 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 575
+[18-Oct-2016 12:00:55 UTC] PHP Notice:  Undefined property: My_Widget::$option_name in D:\Sites\wordpress-4.6.1\www\wp-includes\class-wp-widget.php on line 562
+[18-Oct-2016 12:00:55 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in D:\Sites\wordpress-4.6.1\www\wp-includes\widgets.php on line 541
+[18-Oct-2016 12:17:24 UTC] PHP Notice:  The called constructor method for WP_Widget in My_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in D:\Sites\wordpress-4.6.1\www\wp-includes\functions.php on line 3767
+[18-Oct-2016 12:17:58 UTC] PHP Notice:  The called constructor method for WP_Widget in My_Widget is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in D:\Sites\wordpress-4.6.1\www\wp-includes\functions.php on line 3767
+[18-Oct-2016 16:54:29 UTC] PHP Notice:  Undefined property: wpdb::$test in D:\Sites\wordpress-4.6.1\www\wp-includes\wp-db.php on line 684
+[18-Oct-2016 16:54:29 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 for query SELECT * FROM  made by require('D:\Sites\wordpress-4.6.1\www\wp-config.php'), require_once('D:\Sites\wordpress-4.6.1\www\wp-settings.php'), include_once('D:\Sites\wordpress-4.6.1\www\wp-content\plugins\my-plugin\my-plugin.php')
+[18-Oct-2016 16:54:29 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\my-plugin\my-plugin.php on line 189
+[18-Oct-2016 16:55:05 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\my-plugin\my-plugin.php on line 189
+[18-Oct-2016 16:55:15 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\my-plugin\my-plugin.php on line 189
+[18-Oct-2016 16:55:35 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\plugins\my-plugin\my-plugin.php on line 189
+[19-Oct-2016 12:44:46 UTC] PHP Fatal error:  Call to undefined function QueryException() in D:\Sites\wordpress-4.6.1\www\wp-includes\wp-db.php on line 1873
+[19-Oct-2016 12:44:46 UTC] PHP Fatal error:  Call to undefined function QueryException() in D:\Sites\wordpress-4.6.1\www\wp-includes\wp-db.php on line 1873
+[19-Oct-2016 17:44:08 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\themes\twentysixteen\functions.php on line 428
+[19-Oct-2016 17:44:15 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\themes\twentysixteen\functions.php on line 428
+[19-Oct-2016 17:44:24 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\themes\twentysixteen\functions.php on line 428
+[19-Oct-2016 17:44:25 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\themes\twentysixteen\functions.php on line 428
+[19-Oct-2016 17:44:25 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-content\themes\twentysixteen\functions.php on line 428
+[19-Oct-2016 18:18:49 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 525
+[19-Oct-2016 18:19:49 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 482
+[19-Oct-2016 18:20:07 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 482
+[20-Oct-2016 08:18:17 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 231
+[20-Oct-2016 08:18:42 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 231
+[20-Oct-2016 08:20:21 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 233
+[20-Oct-2016 08:21:08 UTC] PHP Fatal error:  Call to undefined function aa() in D:\Sites\wordpress-4.6.1\www\wp-includes\plugin.php on line 233

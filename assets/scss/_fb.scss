@@ -1,0 +1,27 @@
+.fb {
+  background-image: url(../images/sprite.png);
+  cursor:pointer;
+  width:20px;
+  height:20px;
+  display:inline-block;
+  margin:0;
+  opacity:.5;
+  transform: scale(0.8);
+
+  &:hover {
+    opacity:1;
+  }
+
+  &.fb-cog {
+    background-position: 0 0;
+  }
+  &.fb-plus {
+    background-position: -20px 0;
+  }
+  &.fb-redo {
+    background-position: -120px 0;
+  }
+  &.fb-sort-alpha-down {
+    background-position: -200px 0;
+  }
+}
