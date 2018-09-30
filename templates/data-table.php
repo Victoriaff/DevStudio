@@ -16,11 +16,11 @@
     foreach($data['rows'] as $key=>$row) {
 	    if ( isset( $row['type'] ) && $row['type'] == 'subheader' ) { ?>
             <tr class="subheader">
-                <td colspan="10"><?php echo $key; ?></td>
+                <td colspan="10"><?php echo $row['value']; ?></td>
             </tr>
 	    <?php } else { ?>
-            <tr>
-			    <?php foreach ( $row as $col ) { ?>
+            <tr<?php echo isset($row['class']) ? ' class="'.esc_attr($row['class']).'"':''; ?><?php echo isset($row['id']) ? ' id="'.esc_attr($row['id']).'"':''; ?>>
+			    <?php foreach ( $row['columns'] as $col ) { ?>
                     <td class="<?php echo ! empty( $col['class'] ) ? esc_attr( $col['class'] ) : ''; ?>"><?php echo wp_kses_post( $col['value'] ); ?></td>
 			    <?php } ?>
             </tr>

@@ -10,7 +10,7 @@ class DEV_STUDIO_Template {
 
 	public function load( $tmpl_name, $data = array() ) {
 
-		$fname = DevStudio()->get_plugin_dir() . '/templates/'.$tmpl_name.'.php';
+		$fname = DevStudio()->dir('templates') . $tmpl_name.'.php';
 		if (!file_exists($fname)) return;
 
 		ob_start();

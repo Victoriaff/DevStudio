@@ -28,15 +28,15 @@
                    }
                 });
 
-
-                // Load UI
                 DevStudio.UI();
-
 
                 // Show/Hide UI
                 $('#wp-admin-bar-dev-studio a').on('click', function (e) {
                     e.preventDefault();
-                    $('#dev-studio').toggle();
+                    $('#dev-studio').toggleClass('show');
+
+                    DevStudio.buildUI();
+                    DevStudio.loadData();
                 });
 
                 $('#dev-studio').css({
@@ -84,7 +84,7 @@
             this.ajax({request: 'UI'}, 'UICallback');
         },
         UICallback: function () {
-            console.log(this);
+            //console.log(this);
             $('body').append(this.response.html);
 
             // Show on full screen
@@ -120,7 +120,6 @@
                         }
                     });
                     DevStudio.$components.html(html);
-                    console.log(units_html);
                     DevStudio.$units.html(units_html);
                 }
             });
@@ -146,14 +145,16 @@
 
         // Load data
         loadData: function () {
-            this.setCondition();
+            if ($('#dev-studio.show').length > 0) {
+                this.setCondition();
 
-            var dot_unit = this.module + '.' + this.component + '.' + this.unit;
-            this.ajax({
-                request: 'data',
-                checkpoint: $('#checkpoint').val(),
-                dot_unit: dot_unit
-            }, 'loadDataCallback');
+                var dot_unit = this.module + '.' + this.component + '.' + this.unit;
+                this.ajax({
+                    request: 'data',
+                    checkpoint: $('#checkpoint').val(),
+                    dot_unit: dot_unit
+                }, 'loadDataCallback');
+            }
         },
         loadDataCallback: function () {
             if (this.response.html) {
@@ -176,7 +177,7 @@
                 dataType: 'json',
                 data: data,
                 success: function (response) {
-                    console.log(response);
+                    //console.log(response);
                     DevStudio.response = response;
 
                     if (response.result == 'ok') {

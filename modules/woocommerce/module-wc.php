@@ -9,7 +9,7 @@ class DEV_STUDIO_Module_WC extends DEV_STUDIO_Module {
 
 		parent::__construct();
 
-		$this->components_units( DevStudio()->get_plugin_dir() . '/modules/' . $this->name );
+		$this->components_units( DevStudio()->dir('modules') . $this->name );
 
 		// Add Components
 		$this->add_component( new DEV_STUDIO_Component_WC_Overview() );

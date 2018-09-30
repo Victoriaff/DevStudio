@@ -46,7 +46,7 @@ class DEV_STUDIO_Util {
 		return $data;
 	}
 
-	function rmdir( $dir ) {
+	static function rmdir( $dir ) {
 		if (is_dir($dir)) {
 			$it    = new RecursiveDirectoryIterator( $dir, RecursiveDirectoryIterator::SKIP_DOTS );
 			$files = new RecursiveIteratorIterator( $it, RecursiveIteratorIterator::CHILD_FIRST );

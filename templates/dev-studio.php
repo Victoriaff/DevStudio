@@ -3,7 +3,7 @@
 
 	<div class="header">
 		<div class="logo">
-			<img src="<?php echo DevStudio()->get_plugin_url(); ?>/assets/images/logo.png">
+			<img src="<?php echo DevStudio()->url('assets'); ?>images/logo.png">
             <div class="on-off <?php echo DevStudio()->enabled ? 'on':'off'; ?>">
                 <div class="slider"></div>
                 <div class="items">On&nbsp;&nbsp;&nbsp;Off</div>
@@ -12,7 +12,6 @@
 		</div>
 		<div class="modules">
 			<?php
-            echo $data['a'];
             $active_module = 'wordpress';
 			foreach(DevStudio()->modules() as $module_name=>$module) {
 			    ?>

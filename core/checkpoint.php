@@ -9,6 +9,8 @@ class DEV_STUDIO_Checkpoint {
 	public $default_options = array(
 		'units' => array(
 			'wordpress.overview.overview',
+			'wordpress.overview.conditionals',
+
 			'wordpress.actions.actions',
 			'wordpress.actions.actions_abc'
 		)
@@ -65,55 +67,35 @@ class DEV_STUDIO_Checkpoint {
 
 	public function load_data() {
 
-		$response = array(
-			'result' => ''
-		);
 		$this->checkpoint = $_POST['checkpoint'];
 
 		$mode  = 'admin';
-		$this->checkpoint_dir   = DevStudio()->get_storage_dir() . '/data/' . $mode . '/' . $this->checkpoint;
+		$this->checkpoint_dir   = DevStudio()->dir('storage') . 'data/' . $mode . '/' . $this->checkpoint;
 		$fname = $this->checkpoint_dir . '/' . $_POST['dot_unit'] . '.dat';
-
-		/*
-		$response['result'] = 'ok';
-		$response['fname'] = $fname;
-		$response['_POST'] = $_POST;
-
-		wp_send_json($response);
-		wp_die();
-		*/
-
 
 		if ( file_exists( $fname ) ) {
 			$ex = explode( '.', $_POST['dot_unit'] );
 
+			//return print_r(DevStudio()->map, true);
+
 			if ( isset( DevStudio()->map[ $ex[0] ]['components'][ $ex[1] ]['units'][ $ex[2] ] ) ) {
 
-				$unit = DevStudio()->modules[ $ex[0] ]->components[ $ex[1] ]->units[ $ex[2] ];
+					$unit = DevStudio()->modules[ $ex[0] ]->components[ $ex[1] ]->units[ $ex[2] ];
 				$unit->load( $this->checkpoint_dir, $_POST['dot_unit'] );
 				$html = $unit->html();
 
-				$response['result'] = 'ok';
-				$response['html'] = $html;
-				$response['_POST'] = $_POST;
-
-				wp_send_json($response);
-				wp_die();
+				return $html;
 			}
 		}
-
-
 	}
 
 	function mkdir() {
-		$storage_dir = DevStudio()->get_storage_dir();
+		$storage_dir = DevStudio()->dir('storage');
 
-		$this->checkpoint_mode_dir = $storage_dir . '/data/' . DevStudio()->mode;
+		$this->checkpoint_mode_dir = $storage_dir . 'data/' . DevStudio()->mode;
 		@mkdir( $this->checkpoint_mode_dir, 755 );
 
 		$this->checkpoint_dir = $this->checkpoint_mode_dir . '/' . $this->checkpoint;
 		@mkdir( $this->checkpoint_dir, 755 );
 	}
-
-
 }

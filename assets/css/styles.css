@@ -18,152 +18,170 @@
   .fb.fb-sort-alpha-down {
     background-position: -200px 0; }
 
-.dev-studio {
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(../fonts/Roboto-Regular.ttf) format("ttf"); }
+#dev-studio {
   position: fixed;
   top: 20px;
   left: 0;
   width: 100%;
   background-color: #eee;
   z-index: 10000;
+  display: none;
+  font-family: 'Roboto',sans-serif;
+  color: #444;
   /*border: 2px red solid;*/ }
-  .dev-studio .header {
+  #dev-studio.show {
+    display: block; }
+  #dev-studio .header {
     padding: 10px 10px 10px 5px;
     display: flex; }
-    .dev-studio .header .logo {
+    #dev-studio .header .logo {
       width: 110px;
       max-width: 110px;
       height: 30px;
       vertical-align: top;
       position: relative; }
-      .dev-studio .header .logo img {
+      #dev-studio .header .logo img {
         margin-left: 3px; }
-    .dev-studio .header .modules {
+    #dev-studio .header .modules {
       /*border: 1px red solid;*/
       vertical-align: top;
       margin-left: 10px;
       display: flex;
       transition: 1s; }
-      .dev-studio .header .modules .tab-module {
+      #dev-studio .header .modules .tab-module {
         padding: 6px 12px 0 12px;
         margin-right: 5px;
         height: 30px;
         background-color: #ddd;
         border-radius: 2px;
-        cursor: pointer; }
-        .dev-studio .header .modules .tab-module:not(.active):hover {
+        cursor: pointer;
+        font-size: 14px; }
+        #dev-studio .header .modules .tab-module:not(.active):hover {
           background-color: #74b4df;
           color: #fff; }
-        .dev-studio .header .modules .tab-module.active {
+        #dev-studio .header .modules .tab-module.active {
           background-color: #1286c9;
           color: #fff; }
-    .dev-studio .header .buttons {
+    #dev-studio .header .buttons {
       /*border: 1px red solid;*/
       float: right;
       vertical-align: top;
       margin-right: 10px;
       transition: 1s; }
-  .dev-studio .workspace {
+  #dev-studio .workspace {
     /*border: 1px red solid;*/
     display: flex;
     padding: 5px;
     width: 100%;
     min-height: 500px;
     transition: 1s; }
-    .dev-studio .workspace .tabs-components {
+    #dev-studio .workspace .tabs-components {
       /*border: 1px red solid;*/
       display: flex;
       flex-direction: column;
       align-items: stretch;
       width: 130px;
       padding-top: 37px; }
-      .dev-studio .workspace .tabs-components .component {
+      #dev-studio .workspace .tabs-components .component {
         /*border: 1px red solid;*/
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
         background-color: #ddd;
         margin-bottom: 4px;
-        padding: 7px 10px; }
-        .dev-studio .workspace .tabs-components .component.active {
+        padding: 7px 10px;
+        font-size: 14px; }
+        #dev-studio .workspace .tabs-components .component.active {
           background-color: #1286c9;
           color: #fff; }
-        .dev-studio .workspace .tabs-components .component:not(.active):hover {
+        #dev-studio .workspace .tabs-components .component:not(.active):hover {
           background-color: #74b4df;
           color: #fff;
           cursor: pointer; }
-    .dev-studio .workspace .tabs-data {
+    #dev-studio .workspace .tabs-data {
       display: flex;
       flex-direction: column;
       width: 100%; }
-      .dev-studio .workspace .tabs-data .tabs {
+      #dev-studio .workspace .tabs-data .tabs {
         display: flex; }
-        .dev-studio .workspace .tabs-data .tabs .title {
+        #dev-studio .workspace .tabs-data .tabs .title {
           display: flex;
           font-size: 12px;
           margin-right: 3px; }
-        .dev-studio .workspace .tabs-data .tabs .checkpoints {
+        #dev-studio .workspace .tabs-data .tabs .checkpoints {
           display: flex;
           align-items: center;
           background-color: #fff7da;
           padding: 2px 5px;
           height: 30px;
           margin-left: 5px; }
-          .dev-studio .workspace .tabs-data .tabs .checkpoints .select {
+          #dev-studio .workspace .tabs-data .tabs .checkpoints .select {
             display: flex; }
-          .dev-studio .workspace .tabs-data .tabs .checkpoints .icons {
+          #dev-studio .workspace .tabs-data .tabs .checkpoints .icons {
             display: flex;
             margin-left: 5px; }
-        .dev-studio .workspace .tabs-data .tabs .tabs-units {
+        #dev-studio .workspace .tabs-data .tabs .tabs-units {
           display: flex;
           margin-left: 10px; }
-          .dev-studio .workspace .tabs-data .tabs .tabs-units .unit {
+          #dev-studio .workspace .tabs-data .tabs .tabs-units .unit {
             display: flex;
             border-top-left-radius: 2px;
             border-top-right-radius: 2px;
             background-color: #ddd;
             margin-right: 3px;
-            padding: 5px 7px; }
-            .dev-studio .workspace .tabs-data .tabs .tabs-units .unit.active {
+            padding: 5px 7px;
+            font-size: 13px; }
+            #dev-studio .workspace .tabs-data .tabs .tabs-units .unit.active {
               background-color: #1286c9;
               color: #fff; }
-            .dev-studio .workspace .tabs-data .tabs .tabs-units .unit .fb {
+            #dev-studio .workspace .tabs-data .tabs .tabs-units .unit .fb {
               opacity: 1; }
-            .dev-studio .workspace .tabs-data .tabs .tabs-units .unit:not(.active):hover {
+            #dev-studio .workspace .tabs-data .tabs .tabs-units .unit:not(.active):hover {
               background-color: #74b4df;
               color: #fff;
               cursor: pointer; }
-      .dev-studio .workspace .tabs-data .data {
+      #dev-studio .workspace .tabs-data .data {
         display: flex;
         border-radius: 1px;
         border: 1px #ddd solid;
         background-color: #fafafa;
         max-height: 800px;
         height: 800px; }
-        .dev-studio .workspace .tabs-data .data #dev-studio-data {
+        #dev-studio .workspace .tabs-data .data #dev-studio-data {
           display: flex;
           flex-basis: 50%;
           overflow: scroll;
           padding: 5px; }
-        .dev-studio .workspace .tabs-data .data #dev-studio-data-detail {
+        #dev-studio .workspace .tabs-data .data #dev-studio-data-detail {
           display: flex;
           flex-basis: 50%;
           overflow: scroll;
           border-left: 1px #ddd solid;
           padding: 5px; }
-  .dev-studio .data-table {
+  #dev-studio .data-table {
     width: 100%; }
-    .dev-studio .data-table tr {
+    #dev-studio .data-table tr {
       border-radius: 4px; }
-      .dev-studio .data-table tr.subheader {
+      #dev-studio .data-table tr.subheader {
         background-color: #74b4df !important;
         color: #fff; }
-    .dev-studio .data-table tr:nth-child(even) {
-      background-color: #f2f2f2; }
-    .dev-studio .data-table td, .dev-studio .data-table th {
-      font-size: 12px;
+      #dev-studio .data-table tr:nth-child(even) {
+        background-color: #f2f2f2; }
+      #dev-studio .data-table tr.mark td {
+        color: green;
+        font-weight: bold; }
+      #dev-studio .data-table tr.mask td {
+        color: #999; }
+    #dev-studio .data-table td, #dev-studio .data-table th {
+      font-size: 13px;
       padding: 4px 8px; }
-    .dev-studio .data-table th {
+    #dev-studio .data-table th {
       background-color: #eee; }
-  .dev-studio button {
+  #dev-studio button {
     height: 30px;
     border-radius: 2px;
     padding-left: 15px;
@@ -172,13 +190,13 @@
     cursor: pointer;
     background-color: #1286c9;
     color: #fff; }
-    .dev-studio button:hover {
+    #dev-studio button:hover {
       background-color: #2490ce; }
-  .dev-studio select {
+  #dev-studio select {
     font-size: 12px;
     border-radius: 1px;
     height: 25px; }
-  .dev-studio .on-off {
+  #dev-studio .on-off {
     position: absolute;
     top: 40px;
     left: 30px;
@@ -188,13 +206,13 @@
     cursor: pointer;
     background-color: #29d73e;
     z-index: 1000; }
-    .dev-studio .on-off .items {
+    #dev-studio .on-off .items {
       position: absolute;
       color: #fff;
       top: 3px;
       left: 6px;
       font-size: 12px; }
-    .dev-studio .on-off .slider {
+    #dev-studio .on-off .slider {
       border-radius: 2px;
       position: absolute;
       top: 2px;
@@ -203,13 +221,13 @@
       height: 21px;
       background-color: #1ec331;
       transition: 1s; }
-    .dev-studio .on-off.off {
+    #dev-studio .on-off.off {
       background-color: #bbb; }
-      .dev-studio .on-off.off .slider {
+      #dev-studio .on-off.off .slider {
         background-color: #999;
         left: 28px;
         width: 24px; }
-  .dev-studio.off .modules, .dev-studio.off .workspace, .dev-studio.off .buttons {
+  #dev-studio.off .modules, #dev-studio.off .workspace, #dev-studio.off .buttons {
     opacity: 0.1; }
 
 .ds-text-right {

@@ -54,6 +54,7 @@ if ( ! class_exists( 'DevStudio' ) ) {
 			if ( function_exists( 'add_action' ) ) {
 				// Load assets
 				add_action( 'wp_enqueue_scripts', array( $this, 'load_assets' ) );
+				add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 
 				// Add item to admin bar menu
 				add_action( 'admin_bar_menu', array( $this, 'admin_bar_menu' ), 100 );
@@ -76,22 +77,22 @@ if ( ! class_exists( 'DevStudio' ) ) {
 		}
 
 		public function init() {
-			require_once DevStudio()->get_plugin_dir() . '/core/abstract-module.php';
-			require_once DevStudio()->get_plugin_dir() . '/core/abstract-component.php';
-			require_once DevStudio()->get_plugin_dir() . '/core/abstract-unit.php';
-			require_once DevStudio()->get_plugin_dir() . '/core/checkpoint.php';
-			require_once DevStudio()->get_plugin_dir() . '/core/template.php';
+			require_once DevStudio()->dir('core') . 'abstract-module.php';
+			require_once DevStudio()->dir('core') . 'abstract-component.php';
+			require_once DevStudio()->dir('core') . 'abstract-unit.php';
+			require_once DevStudio()->dir('core') . 'checkpoint.php';
+			require_once DevStudio()->dir('core') . 'template.php';
 
-			require_once DevStudio()->get_plugin_dir() . '/utils/util.php';
-			require_once DevStudio()->get_plugin_dir() . '/utils/data.php';
+			require_once DevStudio()->dir('utils') . 'util.php';
+			require_once DevStudio()->dir('utils') . 'data.php';
 
 			$this->data = DEV_STUDIO_Util_Data::data();
 			$this->mode = ( ! DEV_STUDIO_Util::is_ajax() ? '' : 'ajax_' ) . ( ! DEV_STUDIO_Util::is_admin() ? 'public' : 'admin' );
 
 			$this->load_modules();
-
 			$this->remove_data();
 
+			$this->map        = DEV_STUDIO_Util::map();
 			$this->checkpoint = new DEV_STUDIO_Checkpoint();
 			$this->template   = new DEV_STUDIO_Template();
 
@@ -99,10 +100,11 @@ if ( ! class_exists( 'DevStudio' ) ) {
 
 			//dd( $this->modules() );
 
-			@mkdir( self::get_storage_dir() );
+			@mkdir( self::dir('storage') );
 
 			// Init hook
 			do_action( 'dev-studio/init' );
+
 		}
 
 		/**
@@ -123,9 +125,10 @@ if ( ! class_exists( 'DevStudio' ) ) {
 		 */
 		public function ajax() {
 			$response = array(
-				'result' => 'ok'
+				'result' => 'ok',
+				'_REQUEST' => $_REQUEST
 			);
-			switch ( $_POST['request'] ) {
+			switch ( $_REQUEST['request'] ) {
 				case 'UI':
 					$response['html'] = $this->UI();
 					break;
@@ -141,7 +144,7 @@ if ( ! class_exists( 'DevStudio' ) ) {
 
 		public function load_modules() {
 
-			foreach ( glob( DevStudio()->get_plugin_dir() . '/modules/*', GLOB_ONLYDIR ) as $dir ) {
+			foreach ( glob( DevStudio()->dir('modules') . '*', GLOB_ONLYDIR ) as $dir ) {
 				$module = basename( $dir );
 				foreach ( glob( $dir . '/*.php' ) as $file ) {
 					require_once $file;
@@ -189,16 +192,16 @@ if ( ! class_exists( 'DevStudio' ) ) {
 		 * Load assets
 		 */
 		public function load_assets() {
-			wp_enqueue_style( 'dev-studio', $this->get_plugin_url() . '/assets/css/styles.css' );
+			wp_enqueue_style( 'dev-studio', $this->url() . 'assets/css/styles.css' );
 
-			wp_enqueue_script( 'dev-studio', $this->get_plugin_url() . '/assets/js/scripts.js', array( 'jquery' ) );
+			wp_enqueue_script( 'dev-studio', $this->url() . 'assets/js/scripts.js', array( 'jquery' ) );
 			$data = array(
 				'ajax_url' => '/wp-admin/admin-ajax.php',
 				'mode'     => $this->mode
 			);
 
-			$this->map   = DEV_STUDIO_Util::map();
 			$data['map'] = $this->map;
+			//dd($this->map);
 
 			wp_localize_script( 'dev-studio', 'DSData', $data );
 		}
@@ -234,27 +237,47 @@ if ( ! class_exists( 'DevStudio' ) ) {
 		}
 
 		/** Plugin uninstall */
-		public static function plugin_uninstall() {
+		public function plugin_uninstall() {
 		}
 
-		/** Plugin uninstall */
-		public static function get_storage_dir() {
-			if ( function_exists( 'wp_get_upload_dir' ) ) {
-				$upload_dir = wp_get_upload_dir();
+		public function dir( $type = null ) {
+			switch ( $type ) {
+				case 'modules':
+					return $this->dir() . 'modules/';
+					break;
+				case 'templates':
+					return $this->dir() . 'templates/';
+					break;
+				case 'core':
+					return $this->dir() . 'core/';
+					break;
+				case 'utils':
+					return $this->dir() . 'utils/';
+					break;
+				case 'storage':
+					if ( function_exists( 'wp_get_upload_dir' ) ) {
+						$upload_dir = wp_get_upload_dir();
 
-				return $upload_dir['basedir'] . '/dev-studio';
-			} else {
-				return ABSPATH . 'wp-content/uploads/dev-studio';
+						return $upload_dir['basedir'] . '/dev-studio/';
+					} else {
+						return ABSPATH . 'wp-content/uploads/dev-studio/';
+					}
+					break;
+				default:
+					return __DIR__ . '/';
 			}
 		}
 
-		public function get_plugin_dir() {
-			return __DIR__;
-		}
-
-		public function get_plugin_url() {
-			if ( function_exists( 'plugin_dir_url' ) ) {
-				return plugin_dir_url( __FILE__ );
+		public function url( $type = null ) {
+			switch ( $type ) {
+				case 'assets':
+					return $this->url() . 'assets/';
+					break;
+				default:
+					if ( function_exists( 'plugin_dir_url' ) ) {
+						return plugin_dir_url( __FILE__ );
+					}
+					break;
 			}
 		}
 
@@ -265,12 +288,12 @@ if ( ! class_exists( 'DevStudio' ) ) {
 		}
 
 		public function remove_data() {
-			$storage_dir = DevStudio()->get_storage_dir();
+			$storage_dir = DevStudio()->dir('storage');
 
-			@mkdir( $storage_dir . '/data', 755 );
-			@mkdir( $storage_dir . '/data/' . DevStudio()->mode, 755 );
+			@mkdir( $storage_dir . 'data', 755 );
+			@mkdir( $storage_dir . 'data/' . DevStudio()->mode, 755 );
 
-			DEV_STUDIO_Util::rmdir( $storage_dir . '/data/' . DevStudio()->mode );
+			DEV_STUDIO_Util::rmdir( $storage_dir . 'data/' . DevStudio()->mode );
 		}
 
 		public function me() {

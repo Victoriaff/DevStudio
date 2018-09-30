@@ -47,14 +47,36 @@ abstract class DEV_STUDIO_Unit {
 	 */
 	public function html() {
 		$rows = array();
-		foreach($this->data as $key=>$value) $rows[] = array(
-			array(
-				'value' => $key
-			),
-			array(
-				'value' => $value
-			)
-		);
+		foreach($this->data as $key=>$value) {
+			if ( is_array( $value ) && isset( $value['type'] ) ) {
+				$value['value'] = $key;
+				$rows[] = $value;
+			} else {
+				if (is_array($value)) {
+					$rows[] = array(
+						'type'    => 'columns',
+						'columns' => array(
+							array(
+								'value' => $key
+							),
+							$value
+						)
+					);
+				} else {
+					$rows[] = array(
+						'type'    => 'columns',
+						'columns' => array(
+							array(
+								'value' => $key
+							),
+							array(
+								'value' => $value
+							)
+						)
+					);
+				}
+			}
+		}
 
 		return DevStudio()->template('data-table', array(
 			'rows' => $rows

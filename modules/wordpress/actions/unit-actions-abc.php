@@ -23,15 +23,20 @@ class DEV_STUDIO_Unit_WP_Actions_ABC extends DEV_STUDIO_Unit {
 
 	public function html() {
 		$rows = array();
-		foreach($this->data as $key=>$value) $rows[] = array(
-			array(
-				'value' => $key
-			),
-			array(
-				'value' => $value,
-				'class' => 'ds-text-right'
-			)
-		);
+		foreach($this->data as $key=>$value) {
+			$rows[] = array(
+				'type'    => 'columns',
+				'columns' => array(
+					array(
+						'value' => $key
+					),
+					array(
+						'value' => $value,
+						'class' => 'ds-text-right'
+					)
+				)
+			);
+		}
 
 		return DevStudio()->template('data-table', array(
 			'headers' => array(
@@ -40,6 +45,7 @@ class DEV_STUDIO_Unit_WP_Actions_ABC extends DEV_STUDIO_Unit {
 			),
 			'rows' => $rows
 		));
+
 	}
 
 }
